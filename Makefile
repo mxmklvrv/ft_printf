@@ -6,7 +6,7 @@
 #    By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/12 14:45:30 by mklevero          #+#    #+#              #
-#    Updated: 2025/05/12 14:52:14 by mklevero         ###   ########.fr        #
+#    Updated: 2025/05/13 16:58:25 by mklevero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) 
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c

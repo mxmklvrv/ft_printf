@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_helper_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 14:55:39 by mklevero          #+#    #+#             */
-/*   Updated: 2025/05/13 16:58:26 by mklevero         ###   ########.fr       */
+/*   Created: 2025/05/13 16:17:50 by mklevero          #+#    #+#             */
+/*   Updated: 2025/05/13 16:33:31 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int	ft_printf(const char *format, ...);
-int	ft_putchar(int c);
-
-#endif
+int	ft_putchar(int c)
+{
+	return (write(1, &c, 1));
+}
