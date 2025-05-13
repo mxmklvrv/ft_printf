@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 14:55:39 by mklevero          #+#    #+#             */
-/*   Updated: 2025/05/13 16:58:26 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/05/13 20:16:48 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@
 
 int	ft_printf(const char *format, ...);
 int	ft_putchar(int c);
+int	ft_putstr(const char *str);
+int	ft_putnum(int n);
 
 #endif
