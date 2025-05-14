@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 15:25:04 by mklevero          #+#    #+#             */
-/*   Updated: 2025/05/13 20:16:46 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/05/14 14:45:02 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,12 @@ int	check_format(const char *format, va_list *args)
 	else if (*format == '%')
 		return (ft_putchar('%'));
 	else if (*format == 'd' || *format == 'i')
-		;
-	return (ft_putnum(va_arg(*args, int)));
+		return (ft_putnum(va_arg(*args, int)));
+	else if (*format == 'u')
+		return (ft_putnum_unsigned(va_arg(*args, unsigned int)));
+	else if (*format == 'x')
+		return (ft_puthex_lower(va_arg(*args, unsigned int)));
+		
 	return (-1);
 }
 
