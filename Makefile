@@ -6,11 +6,11 @@
 #    By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/12 14:45:30 by mklevero          #+#    #+#              #
-#    Updated: 2025/05/13 16:58:25 by mklevero         ###   ########.fr        #
+#    Updated: 2025/05/14 18:59:13 by mklevero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 
+SRCS = ft_printf.c ft_helper_num.c ft_helper_char.c 
 
 OBJ = $(SRCS:.c=.o)
 

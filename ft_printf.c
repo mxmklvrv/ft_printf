@@ -6,13 +6,11 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 15:25:04 by mklevero          #+#    #+#             */
-/*   Updated: 2025/05/14 14:45:02 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:59:22 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <unistd.h>
 
 int	check_format(const char *format, va_list *args)
 {
@@ -27,9 +25,13 @@ int	check_format(const char *format, va_list *args)
 	else if (*format == 'u')
 		return (ft_putnum_unsigned(va_arg(*args, unsigned int)));
 	else if (*format == 'x')
-		return (ft_puthex_lower(va_arg(*args, unsigned int)));
-		
-	return (-1);
+		return (ft_base(va_arg(*args, unsigned int), 16, BASE16L));
+	else if (*format == 'X')
+		return (ft_base(va_arg(*args, unsigned int), 16, BASE16U));
+	else if (*format == 'p')
+		return (ft_ptr(va_arg(*args, void *)));
+	else
+		return (-1);
 }
 
 int	ft_printf(const char *format, ...)

@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 16:17:50 by mklevero          #+#    #+#             */
-/*   Updated: 2025/05/13 20:16:50 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:59:26 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ int	ft_putchar(int c)
 
 int	ft_putstr(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
 	if (!str)
 		return (write(1, "(null)", 6));
 	while (*str)
