@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 14:55:39 by mklevero          #+#    #+#             */
-/*   Updated: 2025/05/14 21:18:12 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/05/15 12:27:26 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int	ft_putnum(long n);
 int	ft_putnum_unsigned(unsigned int n);
 int	ft_base(unsigned long n, unsigned long base, char *str);
 int	ft_ptr(void *ptr);
+int	check_format(const char *format, va_list *args);
 
 #endif
